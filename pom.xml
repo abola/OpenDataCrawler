@@ -30,7 +30,7 @@
                 <configuration>
                     <programs>
                         <program>
-                            <mainClass>com.github.abola.opendatacrawler.cwb.OA0001001ToCsv</mainClass>
+                            <mainClass>com.github.abola.opendatacrawler.cwb.tocsv.OA0001001ToCsv</mainClass>
                             <id>OA0001001ToCsv</id>
                         </program>
                     </programs>
@@ -43,6 +43,7 @@
         <dependency>
             <groupId>com.github.abola</groupId>
             <artifactId>crawler</artifactId>
+            <version>1.0.3-1</version>
         </dependency>
         <dependency>
             <groupId>com.google.guava</groupId>
