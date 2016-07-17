@@ -5,8 +5,6 @@ import com.github.abola.opendatacrawler.cwb.tocsv.InterfaceToCsv;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.util.Properties;
-import java.util.logging.LogManager;
 
 /**
  * CWS 資料轉換 XML to CSV 格式
