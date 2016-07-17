@@ -30,8 +30,8 @@
                 <configuration>
                     <programs>
                         <program>
-                            <mainClass>com.github.abola.opendatacrawler.cwb.tocsv.OA0001001ToCsv</mainClass>
-                            <id>OA0001001ToCsv</id>
+                            <mainClass>com.github.abola.opendatacrawler.cwb.ToCsv</mainClass>
+                            <id>toCsv</id>
                         </program>
                     </programs>
                 </configuration>
