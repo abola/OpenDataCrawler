@@ -8,6 +8,25 @@ import org.jsoup.nodes.Element;
 /**
  * CWB O-A0001-001 自動氣象站-氣象觀測資料
  *
+ * 資料欄位說明
+ * LAT 緯度 (座標系統採TWD67)
+ * LON 經度 (座標系統採TWD67)
+ * ELEV 高度，單位 公尺
+ * WDIR 風向，單位 度，風向 0 表示無風
+ * WDSD 風速，單位 公尺/秒
+ * TEMP 溫度，單位 攝氏
+ * HUMD 相對濕度，單位 百分比率，此處以實數 0-1.0 記錄
+ * PRES 測站氣壓，單位 百帕
+ * H_24R 日累積雨量，單位 毫米
+ * WS15M 觀測時間前推十五分鐘內發生最大風的風速，單位 公尺/秒
+ * WD15M 觀測時間前推十五分鐘內發生最大風的風速，單位 度
+ * WS15T 觀測時間前推十五分鐘內發生最大風的發生時間，hhmm (小時分鐘)
+ * CITY 縣市
+ * CITY_SN 縣市編號
+ * TOWN 鄉鎮
+ * TOWN_SN 鄉鎮編號
+ *
+ *
  * @version 1.0
  * @author Abola Lee<abola921@gmail.com>
  */
