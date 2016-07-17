@@ -130,16 +130,16 @@ public class OA0001001ToCsv extends AbstractToCsv {
             Double WD15M = Doubles.tryParse( elem.select("weatherElement:has(elementName:containsOwn(WD15M)) value").text());
             Double WS15T = Doubles.tryParse( elem.select("weatherElement:has(elementName:containsOwn(WS15T)) value").text());
 
-            String CITY = elem.select("parameter:has(parameterName:containsOwn(CITY)) parameterValue").text();
+            String CITY = elem.select("parameter:has(parameterName:matchesOwn(^CITY$)) parameterValue").text();
             String CITY_SN = elem.select("parameter:has(parameterName:containsOwn(CITY_SN)) parameterValue").text();
-            String TOWN = elem.select("parameter:has(parameterName:containsOwn(TOWN)) parameterValue").text();
+            String TOWN = elem.select("parameter:has(parameterName:matchesOwn(^TOWN$)) parameterValue").text();
             String TOWN_SN = elem.select("parameter:has(parameterName:containsOwn(TOWN_SN)) parameterValue").text();
 
             buffer.append(
                 lat+","+lon+","+locationName+","+stationId+","+time
-                +","+ELEV+","+WDIR+","+TEMP+","+HUMD+","+PRES
-                +","+SUN+","+H_24R+","+WS15M+","+WD15M+","+WS15T
-                +","+CITY+","+CITY_SN+","+TOWN+","+TOWN_SN
+                +","+ELEV   +","+WDIR   +","+TEMP   +","+HUMD   +","+PRES
+                +","+SUN    +","+H_24R  +","+WS15M  +","+WD15M  +","+WS15T
+                +","+CITY   +","+CITY_SN+","+TOWN   +","+TOWN_SN
             );
             buffer.append("\n");
         }
