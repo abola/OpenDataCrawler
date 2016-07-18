@@ -140,10 +140,12 @@ public class OA0001001ToCsv extends AbstractToCsv {
 
             Double ELEV = Doubles.tryParse( elem.select("weatherElement:has(elementName:containsOwn(ELEV)) value").text());
             Double WDIR = Doubles.tryParse( elem.select("weatherElement:has(elementName:containsOwn(WDIR)) value").text());
+            Double WDSD = Doubles.tryParse( elem.select("weatherElement:has(elementName:containsOwn(WDSD)) value").text());
             Double TEMP = Doubles.tryParse( elem.select("weatherElement:has(elementName:containsOwn(TEMP)) value").text());
             Double HUMD = Doubles.tryParse( elem.select("weatherElement:has(elementName:containsOwn(HUMD)) value").text());
             Double PRES = Doubles.tryParse( elem.select("weatherElement:has(elementName:containsOwn(PRES)) value").text());
             Double SUN = Doubles.tryParse( elem.select("weatherElement:has(elementName:containsOwn(SUN)) value").text());
+
             Double H_24R = Doubles.tryParse( elem.select("weatherElement:has(elementName:containsOwn(H_24R)) value").text());
             Double WS15M = Doubles.tryParse( elem.select("weatherElement:has(elementName:containsOwn(WS15M)) value").text());
             Double WD15M = Doubles.tryParse( elem.select("weatherElement:has(elementName:containsOwn(WD15M)) value").text());
@@ -156,8 +158,8 @@ public class OA0001001ToCsv extends AbstractToCsv {
 
             buffer.append(
                 lat+","+lon+","+locationName+","+stationId+","+time
-                +","+ELEV   +","+WDIR   +","+TEMP   +","+HUMD   +","+PRES
-                +","+SUN    +","+H_24R  +","+WS15M  +","+WD15M  +","+WS15T
+                +","+ELEV   +","+WDIR   +","+WDSD   +","+TEMP   +","+HUMD+","+PRES+","+SUN
+                +","+H_24R  +","+WS15M  +","+WD15M  +","+WS15T
                 +","+CITY   +","+CITY_SN+","+TOWN   +","+TOWN_SN
             );
             buffer.append("\n");
